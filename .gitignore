@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build folders
+x64/
+Debug/
+Release/
+*.obj
+*.log
+*.ipch
+*.db
+*.pch
+*.tlog
+
+# Qt generated
+*.moc
+*.qrc
+*.ui.h
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
