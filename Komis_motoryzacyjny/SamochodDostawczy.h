@@ -1,6 +1,8 @@
 #pragma once
 #include "Pojazd.h"
 
+using namespace std;
+
 class SamochodDostawczy : public Pojazd 
 {
 private:
@@ -11,7 +13,6 @@ public:
     double getLadownosc() const;
     void setLadownosc(double);
     void wypisz() const override;
-    void zapisz(std::ostream& os) const override;
-    static SamochodDostawczy* wczytaj(std::istream& is);
+    void zapisz(ostream& os) const override;
+    static SamochodDostawczy* wczytaj(istream& is);
 };
-

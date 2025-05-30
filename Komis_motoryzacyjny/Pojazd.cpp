@@ -9,6 +9,7 @@ Pojazd::Pojazd(double pojemnosc, int przebieg, int rok, double cena) : m_pojemno
 
 Pojazd::~Pojazd() 
 {
+
 }
 
 double Pojazd::getPojemnoscSilnika() const 
