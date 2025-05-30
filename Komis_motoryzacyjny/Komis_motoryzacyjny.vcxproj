@@ -92,7 +92,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Komis.cpp" />
+    <ClCompile Include="Motocykl.cpp" />
     <ClCompile Include="Pojazd.cpp" />
+    <ClCompile Include="SamochodDostawczy.cpp" />
+    <ClCompile Include="SamochodOsobowy.cpp" />
     <QtRcc Include="Komis_motoryzacyjny.qrc" />
     <QtUic Include="Komis_motoryzacyjny.ui" />
     <QtMoc Include="Komis_motoryzacyjny.h" />
@@ -100,7 +104,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Komis.h" />
+    <ClInclude Include="Motocykl.h" />
     <ClInclude Include="Pojazd.h" />
+    <ClInclude Include="SamochodDostawczy.h" />
+    <ClInclude Include="SamochodOsobowy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

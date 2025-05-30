@@ -12,5 +12,6 @@ public:
     void setLadownosc(double);
     void wypisz() const override;
     void zapisz(std::ostream& os) const override;
+    static SamochodDostawczy* wczytaj(std::istream& is);
 };
 

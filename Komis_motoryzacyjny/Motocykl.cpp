@@ -30,3 +30,17 @@ void Motocykl::zapisz(ostream& os) const
     os << (m_kufry ? 1 : 0) << endl;
 }
 
+Motocykl* Motocykl::wczytaj(istream& is) 
+{
+    double pojemnosc, cena;
+    int przebieg, rok, kufryInt;
+
+    is >> pojemnosc >> przebieg >> rok >> cena >> kufryInt;
+    if (is.fail())
+    {
+        return nullptr;
+    }
+
+    bool kufry = (kufryInt != 0);
+    return new Motocykl(pojemnosc, przebieg, rok, cena, kufry);
+}

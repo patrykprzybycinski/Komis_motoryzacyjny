@@ -45,3 +45,52 @@ void Komis::zapiszDoPliku(const string& nazwaPliku) const
         pojazd->zapisz(plik);
     }
 }
+
+void Komis::wczytajZPliku(const string& nazwaPliku) 
+{
+    ifstream plik(nazwaPliku);
+    if (!plik) 
+    {
+        cerr << "Nie mozna otworzyc pliku do odczytu\n";
+        return;
+    }
+
+    for (auto p : m_pojazdy)
+    {
+        delete p;
+    }
+    m_pojazdy.clear();
+
+    string typ;
+    while (plik >> typ) 
+    {
+        Pojazd* p = nullptr;
+        if (typ == "osobowy") 
+        {
+            p = SamochodOsobowy::wczytaj(plik);
+        }
+        else if (typ == "dostawczy") 
+        {
+            p = SamochodDostawczy::wczytaj(plik);
+        }
+        else if (typ == "motocykl") 
+        {
+            p = Motocykl::wczytaj(plik);
+        }
+        else 
+        {
+            cerr << "Nieznany typ pojazdu w pliku: " << typ << endl;
+            break;
+        }
+
+        if (p)
+        {
+            m_pojazdy.push_back(p);
+        }
+        else 
+        {
+            cerr << "Blad przy wczytywaniu pojazdu typu: " << typ << endl;
+            break;
+        }
+    }
+}

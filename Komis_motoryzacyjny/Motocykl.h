@@ -13,5 +13,6 @@ public:
     bool getKufry() const;
     void wypisz() const override;
     void zapisz(std::ostream& os) const override;
+    static Motocykl* wczytaj(std::istream& is);
 };
 

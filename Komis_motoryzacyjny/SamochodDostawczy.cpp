@@ -24,3 +24,17 @@ void SamochodDostawczy::zapisz(ostream& os) const
     Pojazd::zapisz(os);
     os << m_ladownosc << endl;
 }
+
+SamochodDostawczy* SamochodDostawczy::wczytaj(istream& is) 
+{
+    double pojemnosc, cena, ladownosc;
+    int przebieg, rok;
+
+    is >> pojemnosc >> przebieg >> rok >> cena >> ladownosc;
+    if (is.fail())
+    {
+        return nullptr;
+    }
+
+    return new SamochodDostawczy(pojemnosc, przebieg, rok, cena, ladownosc);
+}

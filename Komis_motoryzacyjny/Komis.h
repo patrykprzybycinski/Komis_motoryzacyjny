@@ -15,4 +15,5 @@ public:
     void dodajPojazd(Pojazd* pojazd);
     void usunPojazd(int index);
     void zapiszDoPliku(const std::string& nazwaPliku) const;
+    void wczytajZPliku(const std::string& nazwaPliku);
 };

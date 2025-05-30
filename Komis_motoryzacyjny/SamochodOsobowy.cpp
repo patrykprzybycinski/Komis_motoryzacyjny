@@ -24,3 +24,17 @@ void SamochodOsobowy::zapisz(std::ostream& os) const
     Pojazd::zapisz(os);
     os << m_liczbaDrzwi << endl;
 }
+
+SamochodOsobowy* SamochodOsobowy::wczytaj(std::istream& is) 
+{
+    double pojemnosc, cena;
+    int przebieg, rok, drzwi;
+
+    is >> pojemnosc >> przebieg >> rok >> cena >> drzwi;
+    if (is.fail())
+    {
+        return nullptr;
+    }
+
+    return new SamochodOsobowy(pojemnosc, przebieg, rok, cena, drzwi);
+}
