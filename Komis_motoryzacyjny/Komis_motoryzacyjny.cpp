@@ -1,5 +1,6 @@
 #include "Komis_motoryzacyjny.h"
 #include "ui_Komis_motoryzacyjny.h"
+#include "DodajPojazdDialog.h"
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QMessageBox>
@@ -25,7 +26,16 @@ Komis_motoryzacyjny::~Komis_motoryzacyjny()
 
 void Komis_motoryzacyjny::onDodajPojazdClicked()
 {
-
+    DodajPojazdDialog dlg(this);
+    if (dlg.exec() == QDialog::Accepted) 
+    {
+        Pojazd* pojazd = dlg.utworzPojazd();
+        if (pojazd)
+        {
+            komis.dodajPojazd(pojazd);
+            aktualizujListePojazdow();
+        }
+    }
 }
 
 void Komis_motoryzacyjny::onSprzedajPojazdClicked() 
