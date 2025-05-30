@@ -15,6 +15,26 @@ void SamochodDostawczy::setLadownosc(double l)
 
 void SamochodDostawczy::wypisz() const 
 {
-    cout << "Sam. dostawczy: " << m_pojemnosc << "L, " << m_przebieg << " km, " << m_rok << " r., " << m_cena << " zl, ladownosc: " << m_ladownosc << " kg" << endl;;
+    cout << "Sam. dostawczy: " << m_pojemnosc << "L, " << m_przebieg << " km, " << m_rok << " r., " << m_cena << " zl, ladownosc: " << m_ladownosc << " kg" << endl;
 }
 
+void SamochodDostawczy::zapisz(ostream& os) const 
+{
+    os << "dostawczy ";
+    Pojazd::zapisz(os);
+    os << m_ladownosc << endl;
+}
+
+SamochodDostawczy* SamochodDostawczy::wczytaj(istream& is) 
+{
+    double pojemnosc, cena, ladownosc;
+    int przebieg, rok;
+
+    is >> pojemnosc >> przebieg >> rok >> cena >> ladownosc;
+    if (is.fail())
+    {
+        return nullptr;
+    }
+
+    return new SamochodDostawczy(pojemnosc, przebieg, rok, cena, ladownosc);
+}

@@ -43,9 +43,33 @@
     <ClCompile Include="Pojazd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Motocykl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SamochodOsobowy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SamochodDostawczy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Komis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pojazd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Motocykl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SamochodOsobowy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SamochodDostawczy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Komis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
