@@ -14,11 +14,3 @@ const std::vector<Pojazd*>& Komis::getPojazdy() const
 {
     return m_pojazdy;
 }
-
-
-
-
-
-
-
-
