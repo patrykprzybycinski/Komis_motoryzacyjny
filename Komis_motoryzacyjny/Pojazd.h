@@ -28,5 +28,3 @@ public:
 
     virtual void zapisz(ostream& os) const;
 };
-
-
