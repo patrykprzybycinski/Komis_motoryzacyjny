@@ -11,5 +11,6 @@ public:
     double getLadownosc() const;
     void setLadownosc(double);
     void wypisz() const override;
+    void zapisz(std::ostream& os) const override;
 };
 

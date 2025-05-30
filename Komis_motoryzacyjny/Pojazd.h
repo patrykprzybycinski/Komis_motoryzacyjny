@@ -25,6 +25,8 @@ public:
     void setCena(double);
 
     virtual void wypisz() const = 0;
+
+    virtual void zapisz(ostream& os) const;
 };
 
 

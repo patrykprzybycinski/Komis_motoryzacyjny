@@ -51,3 +51,7 @@ void Pojazd::setCena(double c)
 	m_cena = c; 
 }
 
+void Pojazd::zapisz(std::ostream& os) const 
+{
+	os << m_pojemnosc << ' ' << m_przebieg << ' ' << m_rok << ' ' << m_cena << ' ';
+}

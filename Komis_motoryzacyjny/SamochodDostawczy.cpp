@@ -15,6 +15,12 @@ void SamochodDostawczy::setLadownosc(double l)
 
 void SamochodDostawczy::wypisz() const 
 {
-    cout << "Sam. dostawczy: " << m_pojemnosc << "L, " << m_przebieg << " km, " << m_rok << " r., " << m_cena << " zl, ladownosc: " << m_ladownosc << " kg" << endl;;
+    cout << "Sam. dostawczy: " << m_pojemnosc << "L, " << m_przebieg << " km, " << m_rok << " r., " << m_cena << " zl, ladownosc: " << m_ladownosc << " kg" << endl;
 }
 
+void SamochodDostawczy::zapisz(ostream& os) const 
+{
+    os << "dostawczy ";
+    Pojazd::zapisz(os);
+    os << m_ladownosc << endl;
+}

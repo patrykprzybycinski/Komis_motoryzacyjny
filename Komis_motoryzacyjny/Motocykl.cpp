@@ -23,5 +23,10 @@ void Motocykl::wypisz() const
     cout << "Motocykl: " << m_pojemnosc << "L, " << m_przebieg << " km, " << m_rok << " r., " << m_cena << " zl, kufry: " << (m_kufry ? "tak" : "nie") << endl;
 }
 
-
+void Motocykl::zapisz(ostream& os) const 
+{
+    os << "motocykl ";
+    Pojazd::zapisz(os);
+    os << (m_kufry ? 1 : 0) << endl;
+}
 

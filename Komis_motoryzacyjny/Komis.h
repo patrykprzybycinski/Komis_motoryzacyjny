@@ -12,4 +12,7 @@ public:
     ~Komis();
 
     const vector<Pojazd*>& getPojazdy() const;
+    void dodajPojazd(Pojazd* pojazd);
+    void usunPojazd(int index);
+    void zapiszDoPliku(const std::string& nazwaPliku) const;
 };
