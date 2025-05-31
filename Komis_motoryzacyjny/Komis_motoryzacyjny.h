@@ -1,7 +1,11 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include "ui_Komis_motoryzacyjny.h"
+#include "Komis.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class Komis_motoryzacyjny; }
+QT_END_NAMESPACE
 
 class Komis_motoryzacyjny : public QMainWindow
 {
@@ -11,6 +15,16 @@ public:
     Komis_motoryzacyjny(QWidget *parent = nullptr);
     ~Komis_motoryzacyjny();
 
+private slots:
+    void onDodajPojazdClicked();
+    void onSprzedajPojazdClicked();
+    void onZapiszClicked();
+    void onWczytajClicked();
+    void onSortujClicked();
+
 private:
-    Ui::Komis_motoryzacyjnyClass ui;
+    Ui::Komis_motoryzacyjny* ui;
+	Komis komis; 
+
+	void aktualizujListePojazdow();
 };

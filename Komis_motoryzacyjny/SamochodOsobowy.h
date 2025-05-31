@@ -11,6 +11,6 @@ public:
     int getLiczbaDrzwi() const;
     void setLiczbaDrzwi(int drzwi);
     void wypisz() const override;
-    void zapisz(std::ostream& os) const override;
+    void zapisz(ostream& os) const override;
     static SamochodOsobowy* wczytaj(std::istream& is);
 };

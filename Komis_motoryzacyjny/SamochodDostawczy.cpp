@@ -2,6 +2,7 @@
 
 SamochodDostawczy::SamochodDostawczy(double pojemnosc, int przebieg, int rok, double cena, double ladownosc) : Pojazd(pojemnosc, przebieg, rok, cena), m_ladownosc(ladownosc) 
 {
+
 }
 
 double SamochodDostawczy::getLadownosc() const 
