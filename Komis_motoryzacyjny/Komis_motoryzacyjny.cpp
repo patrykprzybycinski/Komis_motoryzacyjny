@@ -1,6 +1,7 @@
 #include "Komis_motoryzacyjny.h"
 #include "ui_Komis_motoryzacyjny.h"
 #include "DodajPojazdDialog.h"
+#include "EdytujPojazdDialog.h"
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QMessageBox>
@@ -128,5 +129,22 @@ void Komis_motoryzacyjny::aktualizujListePojazdow()
         ss << tempStream.str();
         ui->listWidget->addItem(QString::fromStdString(ss.str()));
         ++i;
+    }
+}
+
+void Komis_motoryzacyjny::onEdytujPojazdClicked()
+{
+    int index = ui->listWidget->currentRow();
+    if (index < 0 || index >= komis.getPojazdy().size())
+    {
+        QMessageBox::warning(this, "B³¹d", "Wybierz pojazd z listy.");
+        return;
+    }
+
+    Pojazd* pojazd = komis.getPojazdy()[index];
+    EdytujPojazdDialog dialog(pojazd, this);
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        aktualizujListePojazdow();
     }
 }
