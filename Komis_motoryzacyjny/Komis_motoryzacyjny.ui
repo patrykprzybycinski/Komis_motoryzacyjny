@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>50</y>
       <width>101</width>
       <height>24</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
+      <y>140</y>
       <width>101</width>
       <height>24</height>
      </rect>
@@ -57,7 +57,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>140</y>
+      <y>170</y>
       <width>101</width>
       <height>24</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>180</y>
+      <y>110</y>
       <width>101</width>
       <height>24</height>
      </rect>
@@ -87,6 +87,19 @@
       <width>601</width>
       <height>251</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEdytuj">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Edytuj pojazd</string>
     </property>
    </widget>
   </widget>

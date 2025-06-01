@@ -1,6 +1,7 @@
 #include "Komis_motoryzacyjny.h"
 #include "ui_Komis_motoryzacyjny.h"
 #include "DodajPojazdDialog.h"
+#include "EdytujPojazdDialog.h"
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QMessageBox>
@@ -16,6 +17,7 @@ Komis_motoryzacyjny::Komis_motoryzacyjny(QWidget* parent)
     connect(ui->btnZapisz, &QPushButton::clicked, this, &Komis_motoryzacyjny::onZapiszClicked);
     connect(ui->btnWczytaj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onWczytajClicked);
     connect(ui->btnSortuj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onSortujClicked);
+    connect(ui->btnEdytuj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onEdytujPojazdClicked);
 }
 
 
@@ -128,5 +130,22 @@ void Komis_motoryzacyjny::aktualizujListePojazdow()
         ss << tempStream.str();
         ui->listWidget->addItem(QString::fromStdString(ss.str()));
         ++i;
+    }
+}
+
+void Komis_motoryzacyjny::onEdytujPojazdClicked()
+{
+    int index = ui->listWidget->currentRow();
+    if (index < 0 || index >= komis.getPojazdy().size())
+    {
+        QMessageBox::warning(this, "Blad", "Wybierz pojazd z listy.");
+        return;
+    }
+
+    Pojazd* pojazd = komis.getPojazdy()[index];
+    EdytujPojazdDialog dialog(pojazd, this);
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        aktualizujListePojazdow();
     }
 }

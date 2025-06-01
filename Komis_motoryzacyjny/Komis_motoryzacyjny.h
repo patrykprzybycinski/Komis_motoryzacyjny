@@ -21,6 +21,7 @@ private slots:
     void onZapiszClicked();
     void onWczytajClicked();
     void onSortujClicked();
+    void onEdytujPojazdClicked();
 
 private:
     Ui::Komis_motoryzacyjny* ui;

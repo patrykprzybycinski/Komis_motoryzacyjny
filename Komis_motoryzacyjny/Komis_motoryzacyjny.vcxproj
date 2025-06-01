@@ -93,6 +93,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DodajPojazdDialog.cpp" />
+    <ClCompile Include="EdytujPojazdDialog.cpp" />
     <ClCompile Include="Komis.cpp" />
     <ClCompile Include="Motocykl.cpp" />
     <ClCompile Include="NieznanyPojazdException.cpp" />
@@ -101,6 +102,7 @@
     <ClCompile Include="SamochodOsobowy.cpp" />
     <QtRcc Include="Komis_motoryzacyjny.qrc" />
     <QtUic Include="DodajPojazdDialog.ui" />
+    <QtUic Include="EdytujPojazdDialog.ui" />
     <QtUic Include="Komis_motoryzacyjny.ui" />
     <QtMoc Include="Komis_motoryzacyjny.h" />
     <ClCompile Include="Komis_motoryzacyjny.cpp" />
@@ -108,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DodajPojazdDialog.h" />
+    <QtMoc Include="EdytujPojazdDialog.h" />
     <ClInclude Include="Komis.h" />
     <ClInclude Include="Motocykl.h" />
     <ClInclude Include="NieznanyPojazdException.h" />
