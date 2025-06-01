@@ -17,6 +17,7 @@ Komis_motoryzacyjny::Komis_motoryzacyjny(QWidget* parent)
     connect(ui->btnZapisz, &QPushButton::clicked, this, &Komis_motoryzacyjny::onZapiszClicked);
     connect(ui->btnWczytaj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onWczytajClicked);
     connect(ui->btnSortuj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onSortujClicked);
+    connect(ui->btnEdytuj, &QPushButton::clicked, this, &Komis_motoryzacyjny::onEdytujPojazdClicked);
 }
 
 
