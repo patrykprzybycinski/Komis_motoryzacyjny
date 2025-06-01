@@ -138,7 +138,7 @@ void Komis_motoryzacyjny::onEdytujPojazdClicked()
     int index = ui->listWidget->currentRow();
     if (index < 0 || index >= komis.getPojazdy().size())
     {
-        QMessageBox::warning(this, "B³¹d", "Wybierz pojazd z listy.");
+        QMessageBox::warning(this, "Blad", "Wybierz pojazd z listy.");
         return;
     }
 
